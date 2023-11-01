@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Децентрализованная система дневника</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .card-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 20px;
+        }
+        .card-body{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="mb-4">Мои слёзы</h1>
+    <div class="card-wrapper">
+        <div class="card" style="width: 350px; height: 350px;">
+                <div class="card-body">
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" placeholder="Заметка №1">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="record" placeholder="Дорогой дневник..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="filename" placeholder="Имя файла">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" name="file" accept=".txt, .pdf, .doc, .docx">
+                    </div>
+                    <button type="submit" class="btn btn-info">Сохранить</button>
+
+                    </form>
+                </div>
+        </div>
+        <div th:each="note : ${notes}" class="card" style="width: 350px; height: 350px;">
+            <div class="card-body">
+                <div>
+                    <h4 class="card-title" th:text="${note.getTitle()}"></h4>
+                    <p style="font-size: 16px;" class="card-text" th:text="${note.getRecord()}"></p>
+                </div>
+                <div>
+                    <p style="font-size: 12px; font-weight: bold;" class="card-text" th:text="${note.getDate()}"></p>
+                    <a th:href="@{'/download/' + ${note.file.id}}" class="card-link"
+                       th:text="${note.file.getFileName()}"></a>
+                    <a th:href="@{'/delete/' + ${note.noteId}}" class="card-link">Удалить запись</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

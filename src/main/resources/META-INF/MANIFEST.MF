@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Main-Class: com.example.live.LiveApplication
+Class-Path: spring-boot-starter-logging-3.0.4.jar istack-commons-runtime
+ -4.1.1.jar hibernate-commons-annotations-6.0.6.Final.jar spring-data-co
+ mmons-3.0.3.jar tomcat-embed-el-10.1.5.jar micrometer-commons-1.10.4.ja
+ r jackson-datatype-jsr310-2.14.2.jar micrometer-observation-1.10.4.jar 
+ spring-core-6.0.6.jar spring-jcl-6.0.6.jar jakarta.annotation-api-2.1.1
+ .jar spring-webmvc-6.0.6.jar spring-boot-autoconfigure-3.0.4.jar jackso
+ n-datatype-jdk8-2.14.2.jar jandex-2.4.2.Final.jar spring-boot-starter-w
+ eb-3.0.4.jar jul-to-slf4j-2.0.6.jar jackson-core-2.14.2.jar byte-buddy-
+ 1.12.23.jar spring-boot-starter-data-jpa-3.0.4.jar postgresql-42.5.4.ja
+ r hibernate-core-6.1.7.Final.jar jaxb-core-4.0.2.jar jakarta.activation
+ -api-2.1.1.jar spring-orm-6.0.6.jar spring-context-6.0.6.jar jaxb-runti
+ me-4.0.2.jar log4j-to-slf4j-2.19.0.jar logback-classic-1.4.5.jar spring
+ -boot-3.0.4.jar logback-core-1.4.5.jar spring-boot-starter-tomcat-3.0.4
+ .jar txw2-4.0.2.jar spring-data-jpa-3.0.3.jar spring-boot-starter-json-
+ 3.0.4.jar spring-web-6.0.6.jar jackson-module-parameter-names-2.14.2.ja
+ r spring-boot-starter-aop-3.0.4.jar unbescape-1.1.6.RELEASE.jar jakarta
+ .xml.bind-api-4.0.0.jar jackson-annotations-2.14.2.jar spring-tx-6.0.6.
+ jar spring-jdbc-6.0.6.jar classmate-1.5.1.jar attoparser-2.0.6.RELEASE.
+ jar log4j-api-2.19.0.jar spring-boot-starter-3.0.4.jar snakeyaml-1.33.j
+ ar jakarta.persistence-api-3.1.0.jar spring-beans-6.0.6.jar checker-qua
+ l-3.5.0.jar thymeleaf-3.1.1.RELEASE.jar angus-activation-2.0.0.jar spri
+ ng-aop-6.0.6.jar jboss-logging-3.5.0.Final.jar aspectjweaver-1.9.19.jar
+  tomcat-embed-websocket-10.1.5.jar spring-aspects-6.0.6.jar spring-boot
+ -starter-jdbc-3.0.4.jar antlr4-runtime-4.10.1.jar jakarta.inject-api-2.
+ 0.0.jar jakarta.transaction-api-2.0.1.jar tomcat-embed-core-10.1.5.jar 
+ HikariCP-5.0.1.jar jackson-databind-2.14.2.jar slf4j-api-2.0.6.jar spri
+ ng-expression-6.0.6.jar thymeleaf-spring6-3.1.1.RELEASE.jar spring-boot
+ -starter-thymeleaf-3.1.5.jar
+
